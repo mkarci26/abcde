@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "@aetna/vhealth-common",
+  "version": "0.2.270",
+  "description": "",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://git.wearefriday.com/projects/AETNA/repos/aetna-vhealth-common.git"
+  },
+  "dependencies": {
+    "@angular/animations": "5.2.5",
+    "@angular/common": "5.2.5",
+    "@angular/compiler": "5.2.5",
+    "@angular/core": "5.2.5",
+    "@angular/forms": "5.2.5",
+    "@angular/http": "5.2.5",
+    "@ngx-translate/core": "9.1.1",
+    "moment": "2.22.0",
+    "moment-es6": "1.0.0",
+    "rxjs": "5.5.6",
+    "zone.js": "0.8.20",
+    "tslib": "^1.7.1"
+  },
+  "main": "bundles/aetna-vhealth-common.umd.js",
+  "module": "esm5/aetna-vhealth-common.js",
+  "es2015": "esm2015/aetna-vhealth-common.js",
+  "typings": "aetna-vhealth-common.d.ts",
+  "metadata": "aetna-vhealth-common.metadata.json"
+}

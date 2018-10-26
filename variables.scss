@@ -1,0 +1,92 @@
+// Helper mixins
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin hover {
+
+  // workaround for Firefox & IE
+  @supports (-moz-appearance: none ) {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+
+  @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+
+  // sass-lint:disable space-after-colon
+  @media ('hover:hover') {
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+
+}
+
+// ********************
+//   Swatches
+// ********************
+
+// Violet swatches
+$swatch-violet-dark: #5d2a73;
+$swatch-violet: #7d3f98;
+$swatch-violet-tint: #b18cc1;
+$swatch-violet-light: #f5eff8;
+
+// Cranberry swatches
+$swatch-cranberry: #d20962;
+$swatch-cranberry-tint: #e46b95;
+$swatch-cranberry-neon: #ef1e7b;
+
+// Grey swatches
+$swatch-charcoal: #414141;
+$swatch-grey-dark: #646464;
+$swatch-grey-light: #dcdcdc;
+
+// Teal swatches
+$swatch-teal: #00a78e;
+$swatch-teal-tint: #66cabb;
+$swatch-teal-neon: #00f0cc;
+$swatch-teal-deep-ui: #007d82;
+
+// Base swatches
+$swatch-smoke: #f5f5f5;
+$swatch-black: #000;
+$swatch-white: #fff;
+
+// ********************
+//   Font names
+// ********************
+$font-family-title: 'Domaine Display';
+$font-family-content: 'Open Sans';
+$font-family-icons: 'vHealth Icon Font';
+
+// ********************
+//   Font sizes
+// ********************
+
+$font-title-large: 700 3.8rem/4.8rem $font-family-title;
+$font-title-medium: 700 3.2rem/4.2rem $font-family-title;
+$font-title-small: 700 2.4rem/3.4rem $font-family-title;
+
+$font-content-title: 1.8rem/2.4rem $font-family-title;
+$font-content-large: 1.6rem/2.4rem $font-family-content;
+$font-content-small: 1.2rem/2rem $font-family-content;
+
+// ********************
+//   Breakpoints
+// ********************
+
+$wide: 1240px;
+$large: 1024px;
+$tablet: 800px;
+$mobile: 480px;
